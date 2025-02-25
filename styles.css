@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #B2A88F;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* 📱 Main Container (Now Fullscreen!) */
+.container {
+    position: relative;
+    width: 100vw;  /* Takes full width */
+    height: 100vh; /* Takes full height */
+    background: #E65E47;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+}
+
+/* 📝 Scrolling Background Text (Moves on Scroll) */
+.background-text {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: transform 0.3s ease-out;
+}
+
+/* 🔥 Moving Shape */
+.animated-shape {
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20vw;
+    max-width: 180px;
+    height: 20vw;
+    max-height: 180px;
+    background: radial-gradient(circle, #FFD700, #FF6F61);
+    clip-path: polygon(50% 0%, 75% 25%, 100% 50%, 75% 75%, 50% 100%, 25% 75%, 0% 50%, 25% 25%);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+    100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+}
+
+/* 📜 Content */
+.content {
+    position: relative;
+    margin-top: 50vh;
+    text-align: center;
+    width: 90%;
+}
+
+.focus {
+    font-size: 6vw;
+    font-weight: 600;
+    color: black;
+}
+
+/* 🎯 Button */
+.get-started {
+    margin-top: 20px;
+    padding: 2vh 5vw;
+    border: 2px solid black;
+    border-radius: 30px;
+    background: transparent;
+    font-size: 3vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.get-started:hover {
+    background: black;
+    color: white;
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 480px) {
+    .focus { font-size: 40px; }
+    .get-started { font-size: 18px; }
+}
+
+/* 💻 Tablet Adjustments */
+@media (min-width: 768px) {
+    .focus { font-size: 50px; }
+    .get-started { font-size: 20px; }
+}
+
+/* 🖥️ Large Screen Adjustments */
+@media (min-width: 1024px) {
+    .focus { font-size: 55px; }
+    .get-started { font-size: 22px; }
+}
