@@ -11,27 +11,76 @@ body {
     background: #B2A88F;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    justify-content: flex-start;
+    overflow-x: hidden;
 }
 
-/* Main Container (Now Fullscreen!) */
+/* 🔹 Navigation Bar */
+nav {
+    width: 100%;
+    background: black;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #FFD700;
+    color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #E65E47; /* Match the container's background */
+    height: 100vh;
+    overflow-x: hidden;
+}
+
 .container {
     position: relative;
-    width: 100vw;  /* Takes full width */
-    height: 100vh; /* Takes full height */
-    background: #E65E47;
-    overflow-y: auto;
-    overflow-x: hidden;
+    width: 100vw;
+    height: 300vh; /* Keeps the scrolling effect */
+    background: inherit; /* Uses the same background as the body */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    scroll-behavior: smooth;
 }
 
-/* Scrolling Background Text (Moves on Scroll) */
+/* 📝 Moving Background Text */
 .background-text {
     position: absolute;
     top: 10vh;
@@ -41,19 +90,16 @@ body {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.2);
     text-align: center;
-    line-height: 1.5;
-    width: 100%;
     text-transform: uppercase;
     white-space: nowrap;
-    transition: transform 0.3s ease-out;
 }
 
-/* Moving Shape */
+/* 🔥 Animated Shape */
 .animated-shape {
-    position: absolute;
-    bottom: 20vh;
+    position: fixed;
+    bottom: 35%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
     width: 20vw;
     max-width: 180px;
     height: 20vw;
@@ -63,15 +109,12 @@ body {
     animation: glow 3s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-    0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
-    100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
-}
-
-/* Content */
+/* 📜 Content (Stays Fixed) */
 .content {
-    position: relative;
-    margin-top: 50vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     width: 90%;
 }
@@ -82,7 +125,7 @@ body {
     color: black;
 }
 
-/* Button */
+/* 🎯 Button */
 .get-started {
     margin-top: 20px;
     padding: 2vh 5vw;
@@ -99,19 +142,40 @@ body {
     color: white;
 }
 
-/* Mobile Adjustments */
+@keyframes glow {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
+    100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+}
+
+/* 📜 Page Content */
+.page-content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.page-content h1 {
+    font-size: 40px;
+    color: black;
+}
+
+.page-content p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* 📱 Mobile Adjustments */
 @media (max-width: 480px) {
     .focus { font-size: 40px; }
     .get-started { font-size: 18px; }
 }
 
-/* Tablet Adjustments */
+/* 💻 Tablet Adjustments */
 @media (min-width: 768px) {
     .focus { font-size: 50px; }
     .get-started { font-size: 20px; }
 }
 
-/* Large Screen Adjustments */
+/* 🖥️ Large Screen Adjustments */
 @media (min-width: 1024px) {
     .focus { font-size: 55px; }
     .get-started { font-size: 22px; }

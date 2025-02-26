@@ -1,8 +1,12 @@
-const container = document.querySelector(".container");
-const backgroundText = document.querySelector(".background-text");
+document.addEventListener("DOMContentLoaded", () => {
+    const bgText = document.querySelector(".background-text");
 
-// Move text when scrolling
-container.addEventListener("scroll", () => {
-    let scrollTop = container.scrollTop;
-    backgroundText.style.transform = `translateX(-50%) translateY(${scrollTop * 0.5}px)`;
+    window.addEventListener("scroll", () => {
+        let scrollValue = window.scrollY;
+        bgText.style.transform = `translate(-50%, ${scrollValue * 0.3}px)`;
+    });
 });
+
+function navigateTo(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+}
