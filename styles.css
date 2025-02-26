@@ -16,7 +16,7 @@ body {
     overflow: hidden;
 }
 
-/* 📱 Main Container (Now Fullscreen!) */
+/* Main Container (Now Fullscreen!) */
 .container {
     position: relative;
     width: 100vw;  /* Takes full width */
@@ -31,7 +31,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 📝 Scrolling Background Text (Moves on Scroll) */
+/* Scrolling Background Text (Moves on Scroll) */
 .background-text {
     position: absolute;
     top: 10vh;
@@ -48,7 +48,7 @@ body {
     transition: transform 0.3s ease-out;
 }
 
-/* 🔥 Moving Shape */
+/* Moving Shape */
 .animated-shape {
     position: absolute;
     bottom: 20vh;
@@ -68,7 +68,7 @@ body {
     100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
 }
 
-/* 📜 Content */
+/* Content */
 .content {
     position: relative;
     margin-top: 50vh;
@@ -82,7 +82,7 @@ body {
     color: black;
 }
 
-/* 🎯 Button */
+/* Button */
 .get-started {
     margin-top: 20px;
     padding: 2vh 5vw;
@@ -99,19 +99,19 @@ body {
     color: white;
 }
 
-/* 📱 Mobile Adjustments */
+/* Mobile Adjustments */
 @media (max-width: 480px) {
     .focus { font-size: 40px; }
     .get-started { font-size: 18px; }
 }
 
-/* 💻 Tablet Adjustments */
+/* Tablet Adjustments */
 @media (min-width: 768px) {
     .focus { font-size: 50px; }
     .get-started { font-size: 20px; }
 }
 
-/* 🖥️ Large Screen Adjustments */
+/* Large Screen Adjustments */
 @media (min-width: 1024px) {
     .focus { font-size: 55px; }
     .get-started { font-size: 22px; }
