@@ -15,12 +15,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     overflow-x: hidden;
+    padding-top: 70px;
 }
 
 .dashboard {
     width: 90vw;  /* Use percentage for responsiveness */
-    max-width: 400px; /* Prevents it from getting too wide */
-    height: auto; /* Adjusts height dynamically */
+    max-width: 1200px; /* Prevents it from getting too wide */
+    height: 80vh; /* Adjusts height dynamically */
     min-height: 600px;
     background: #E5E1D8;
     padding: 20px;
@@ -31,6 +32,8 @@ body {
     align-items: center;
     justify-content: space-between; /* Ensures elements are spaced well */
     margin: auto;
+    margin-top: 70px;  /* Pushes the dashboard below the navbar */
+    
 }
 
 
@@ -58,6 +61,11 @@ header {
     border: none;
     font-size: 14px;
     cursor: pointer;
+    margin-left: 250px;
+}
+
+.date-picker p {
+    margin-left: 250px;
 }
 
 /* Screen Time Info */
@@ -99,6 +107,7 @@ header {
     padding: 15px;
     border-radius: 15px;
     text-align: center;
+    margin-top: -70px;
 }
 
 .focus-score h1 {
@@ -119,8 +128,8 @@ header {
     width: 100%;
     padding: 15px;
     margin-top: 15px;
-    background: #E65E47;
-    color: white;
+    background: #eeeae9;
+    color: rgb(235, 88, 88);
     border: none;
     font-size: 18px;
     border-radius: 10px;
@@ -301,24 +310,27 @@ section {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .dashboard {
         width: 95vw;
-        max-width: 360px;
-    }
-}
-
-@media (min-width: 768px) {
-    .dashboard {
-        width: 50vw;
-        max-width: 500px;
+        max-width: 600px;
+        height: auto;
     }
 }
 
 @media (min-width: 1024px) {
     .dashboard {
-        width: 40vw;
-        max-width: 600px;
+        width: 70vw;
+        max-width: 1000px;
+        height: 85vh;
+    }
+}
+
+@media (min-width: 1440px) {
+    .dashboard {
+        width: 60vw;
+        max-width: 1200px;
+        height: 90vh;
     }
 }
 .nav-buttons {
