@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false, // Allow it to resize properly
+                    maintainAspectRatio: false,
                     scales: {
                         x: { display: true },
                         y: { display: true }
@@ -29,12 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 });
 document.getElementById("nextPage").addEventListener("click", function () {
-    window.location.href = "next-page.html"; // Replace with your actual page
+    window.location.href = "next-page.html";
 });
 
 document.getElementById("prevPage").addEventListener("click", function () {
     window.location.href = "index.html"; // Replace with your actual page
 });
+
+document.querySelectorAll(".startFocusBtn").forEach(button => {
+    button.addEventListener("click", function () {
+        window.location.href = "dashboard.html";
+    });
+});
+
 
 function navigateTo(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });

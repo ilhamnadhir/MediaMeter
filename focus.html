@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Session</title>
+    <link rel="stylesheet" href="styless.css">
+    <script defer src="focus.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Focus Session</h1>
+        <div class="mode-toggle">
+            <button id="pomodoroMode" class="active">Pomodoro (25/5)</button>
+            <button id="customMode">Custom</button>
+        </div>
+        <div class="timer">
+            <svg>
+                <circle cx="50%" cy="50%" r="90"></circle>
+                <circle cx="50%" cy="50%" r="90" id="progress"></circle>
+            </svg>
+            <span id="time-display">25:00</span>
+        </div>
+        <div class="controls">
+            <button id="startPauseBtn">Start</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+</body>
+</html>

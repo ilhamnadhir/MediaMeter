@@ -124,7 +124,7 @@ header {
 }
 
 /* Focus Button */
-.focus-button {
+.startFocusBtn {
     width: 100%;
     padding: 15px;
     margin-top: 15px;
@@ -136,8 +136,8 @@ header {
     cursor: pointer;
 }
 
-.focus-button:hover {
-    background: #c44838;
+.startFocusBtn:hover {
+    background: #3d0a04;
 }
 
 /* 🔹 Navigation Bar */
