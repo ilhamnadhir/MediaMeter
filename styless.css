@@ -85,3 +85,25 @@ circle {
     background: #bbb;
     color: white;
 }
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.nav-buttons button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background: #E65E47;
+}

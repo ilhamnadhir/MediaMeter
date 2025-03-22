@@ -53,3 +53,7 @@ resetBtn.addEventListener("click", resetTimer);
 
 updateTimerDisplay();
 updateProgress();
+
+document.getElementById("prevPage").addEventListener("click", function () {
+    window.location.href = "dashboard.html"; 
+});

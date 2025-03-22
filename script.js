@@ -33,14 +33,12 @@ document.getElementById("nextPage").addEventListener("click", function () {
 });
 
 document.getElementById("prevPage").addEventListener("click", function () {
-    window.location.href = "index.html"; // Replace with your actual page
+    window.location.href = "index.html"; 
 });
 
-document.querySelectorAll(".startFocusBtn").forEach(button => {
-    button.addEventListener("click", function () {
-        window.location.href = "dashboard.html";
+document.querySelector(".startFocusBtn").addEventListener("click", function () {
+        location.assign("focus.html");
     });
-});
 
 
 function navigateTo(sectionId) {

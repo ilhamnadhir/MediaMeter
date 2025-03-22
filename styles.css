@@ -129,18 +129,27 @@ header {
     padding: 15px;
     margin-top: 15px;
     background: #eeeae9;
-    color: rgb(235, 88, 88);
+    color: rgb(7, 7, 6);
     border: none;
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.startFocusBtn:hover {
-    background: #3d0a04;
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/') format('woff2'),
+         url('../fonts/myFont.woff') format('woff');  
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* 🔹 Navigation Bar */
+
+.startFocusBtn:hover {
+    background: #b68254;
+}
+
+
 nav {
     width: 100%;
     background: black;
@@ -173,7 +182,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background: #FFD700;
+    background: #D5BDAF;
     color: black;
 }
 
@@ -187,7 +196,7 @@ nav ul li a.active {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #E65E47; /* Match the container's background */
+    background: #C9AD93; /* Match the container's background */
     height: 100vh;
     overflow-x: hidden;
 }
@@ -217,7 +226,6 @@ body {
     white-space: nowrap;
 }
 
-/* 🔥 Animated Shape */
 .animated-shape {
     position: fixed;
     bottom: 35%;
@@ -227,7 +235,7 @@ body {
     max-width: 180px;
     height: 20vw;
     max-height: 180px;
-    background: radial-gradient(circle, #FFD700, #FF6F61);
+    background: radial-gradient(circle, #FF6F61, #554940);
     clip-path: polygon(50% 0%, 75% 25%, 100% 50%, 75% 75%, 50% 100%, 25% 75%, 0% 50%, 25% 25%);
     animation: glow 3s ease-in-out infinite alternate;
 }
@@ -236,7 +244,7 @@ body {
     100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
 }
 
-/* 📜 Content (Stays Fixed) */
+/*  Content (Stays Fixed) */
 .content {
     position: fixed;
     top: 50%;
@@ -341,7 +349,7 @@ section {
 }
 
 .nav-buttons button {
-    background-color: #FF6F61;
+    background-color: #cc884c;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -352,7 +360,7 @@ section {
 }
 
 .nav-buttons button:hover {
-    background: #E65E47;
+    background: #240902;
 }
 
 .dashboard section {
