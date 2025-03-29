@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Time Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Screen Time Analysis</h1>
+        <a href="index.html" class="logout">Logout</a>
+    </header>
+
+    <main class="dashboard">
+        <section class="charts">
+            <canvas id="screenTimeChart"></canvas>
+            <canvas id="usagePieChart"></canvas>
+        </section>
+        <section class="detailed-stats">
+            <canvas id="barChart"></canvas>
+        </section>
+    </main>
+
+    <script>
+        const ctx1 = document.getElementById('screenTimeChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Total Screen Time (hours)',
+                    data: [3, 4, 2.5, 5, 6, 7, 4.5],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true
+                }]
+            }
+        });
+
+        const ctx2 = document.getElementById('usagePieChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Social Media', 'Streaming', 'Work', 'Other'],
+                datasets: [{
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+                }]
+            }
+        });
+
+        const ctx3 = document.getElementById('barChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['Facebook', 'Instagram', 'YouTube', 'Netflix', 'Twitter'],
+                datasets: [{
+                    label: 'Usage Time (mins)',
+                    data: [120, 90, 150, 200, 60],
+                    backgroundColor: ['#4267B2', '#E1306C', '#FF0000', '#E50914', '#1DA1F2']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

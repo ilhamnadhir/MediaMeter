@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Time Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">MediaMeter</div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#login-section">Login</a>
+            <a href="#">Contact</a>
+            <button id="theme-toggle">🌙</button>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Take Control of Your Time Online</h1>
+            <p>Real-time screen time analysis across devices and social media.</p>
+            <button class="scroll-link" data-target="#login-section">Login</button>
+        </div>
+        <div class="hero-image">
+            <spline-viewer url="https://prod.spline.design/DlklXMM9lV27yEyP/scene.splinecode"></spline-viewer>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="login-container" id="login-section">
+        <div class="login-box">
+            <h3>Log In</h3>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email/Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+            <p>Or sign in with:</p>
+            <div class="social-buttons">
+                <button class="facebook">Facebook</button>
+                <button class="google">Google</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">Privacy | Terms</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

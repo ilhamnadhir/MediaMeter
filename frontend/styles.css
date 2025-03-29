@@ -1,0 +1,249 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #16cff0, #19a6c9);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 10px rgba(105, 200, 245, 0.6);
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    text-shadow: 2px 2px 15px rgb(82, 15, 236);
+    transform: scale(1.05);
+}
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #1F51FF;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+:root {
+    --bg-color: #1a1a2e;
+    --text-color: white;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --btn-bg: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+.light-mode {
+    --bg-color: white;
+    --text-color: black;
+    --card-bg: rgba(0, 0, 0, 0.1);
+    --btn-bg: linear-gradient(to right, #4CAF50, #66BB6A);
+}
+
+/* Apply to body and text elements */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Ensure text inside header, nav, login box, etc., also changes */
+.header, .nav a, .hero-text p, .hero-text h1, .hero-text p, 
+.login-box h3, .login-box p, .footer {
+    color: var(--text-color);
+}
+
+.login-box, .header, .footer {
+    background: var(--card-bg);
+}
+
+button {
+    background: var(--btn-bg);
+    color: white;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+/* Ensure input text changes color in light mode */
+.light-mode input {
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+
+
+
+
+.hero-image spline-viewer {
+    width: 100%;
+    max-width: 350px; /* Adjust size as needed */
+    height: 350px;
+    display: block;
+}
+
+
+/* Login Section */
+.hero, .login-container {
+    height: 100vh; /* Full screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 320px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #5cf1f7, #04032b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #100b53, #eee2e0);
+}
+
+/* Social Login Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.social-buttons button {
+    width: 45%;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.social-buttons .facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.social-buttons .google {
+    background: #26b7fa;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+    }
+}
+
